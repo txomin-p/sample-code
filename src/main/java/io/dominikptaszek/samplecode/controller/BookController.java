@@ -21,7 +21,7 @@ public class BookController {
                           String title,
                           String author,
                           String genre
-                          //String coverImageUrl
+                          //,String coverImageUrl
                           ){
     }
 
