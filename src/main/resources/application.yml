@@ -2,9 +2,9 @@ server:
   port: 8080
 spring:
   datasource:
-    url:
-    username:
-    password:
+    url: jdbc:postgresql://localhost:5432/testdb
+    username: postgres
+    password: password
   jpa:
     hibernate:
       ddl-auto: create-drop

@@ -30,11 +30,10 @@ public class BookController {
         return bookRepository.findAll();
     }
 
-    @GetMapping({"bookId"})
+    @GetMapping("{bookID}")
     public Book getBookById(@PathVariable("bookID") Integer bookId){
         return bookRepository.findById(bookId).get();
     }
-
 
     @PostMapping
     public void addBook(@RequestBody newBookRequest request){

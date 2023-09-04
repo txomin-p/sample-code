@@ -6,6 +6,9 @@ import jakarta.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
 
+import lombok.*;
+
+@Builder
 @Entity
 public class Book {
 
@@ -27,9 +30,8 @@ public class Book {
     private String coverImageUrl;
     private Timestamp obtainDate;
 
-    public Book(){
+    public Book() { }
 
-    }
     public Book(Integer id,
                 Integer isbn,
                 String title,
@@ -42,6 +44,16 @@ public class Book {
         this.author = author;
         this.genre = genre;
         this.coverImageUrl = coverImageUrl;
+    }
+
+    public Book(Integer id,
+                Integer isbn,
+                String title,
+                String author,
+                String genre,
+                String coverImageUrl,
+                Timestamp timestamp) {
+        this(id,isbn,title,author,genre,coverImageUrl);
     }
 
     public Integer getId() {
